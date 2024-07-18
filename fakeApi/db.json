@@ -1,0 +1,28 @@
+{
+  "viajes": [
+    {
+      "id": "707b",
+      "nombre": "Calafate",
+      "precio": 500,
+      "fecha": 456
+    },
+    {
+      "id": "7393",
+      "nombre": "nacho",
+      "precio": 213,
+      "fecha": 32
+    },
+    {
+      "id": "32f1",
+      "nombre": "alfajor",
+      "precio": 250,
+      "fecha": 321
+    },
+    {
+      "id": "7f03",
+      "nombre": "nacho",
+      "precio": 3,
+      "fecha": 2
+    }
+  ]
+}
