@@ -1,28 +1,18 @@
 {
   "viajes": [
     {
-      "id": "707b",
-      "nombre": "Calafate",
+      "nombre": "españa",
       "precio": 500,
-      "fecha": 456
+      "fecha": "2024-07-01",
+      "imagen": "https://media.viajando.travel/p/3f600e17dd8b89dd3aa9b82f54b7b6c2/adjuntos/236/imagenes/000/662/0000662813/412x232/smart/shutterstock_786312625-espana-madridjpg.jpg",
+      "id": "592a"
     },
     {
-      "id": "7393",
-      "nombre": "nacho",
-      "precio": 213,
-      "fecha": 32
-    },
-    {
-      "id": "32f1",
-      "nombre": "alfajor",
-      "precio": 250,
-      "fecha": 321
-    },
-    {
-      "id": "7f03",
-      "nombre": "nacho",
-      "precio": 3,
-      "fecha": 2
+      "nombre": "buenos aires",
+      "precio": 500,
+      "fecha": "2024-07-02",
+      "imagen": "https://media.admagazine.com/photos/618a6a585e45a526c6be8f63/master/w_1600%2Cc_limit/61333.jpg",
+      "id": "ff56"
     }
   ]
 }

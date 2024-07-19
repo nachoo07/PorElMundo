@@ -1,3 +1,10 @@
+body {
+    background-image: url('./imagenes/fondo.jpg');
+    background-size: auto;
+    background-repeat: repeat;
+    width: 100%;
+    background-attachment: fixed;
+  }
 .navegador{
     background-color: #156296;
     padding: 0px;
@@ -103,4 +110,137 @@ footer a:hover {
 }
 .footer-column {
     padding: 10px;
+}
+
+.imagen-tarjetas{
+    height: 150px;
+    width: 250px;
+}
+
+.card-body{
+    
+    width: 300px;
+}
+
+.card{
+    width: 300px;
+}
+
+#add-product-form {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 1.5rem;
+    border-radius: 0.375rem;
+}
+
+#add-product-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#add-product-form .form-label {
+    font-weight: bold;
+}
+
+#submit-button {
+    font-weight: bold;
+    background-color: #156296;
+    border-color: #156296;
+    color: #ffffff;
+}
+
+#submit-button:hover {
+    background-color: #0e4c75;
+    border-color: #0e4c75;
+}
+
+/* Estilos para la tabla */
+.table {
+    margin-top: 2rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.table thead th {
+    background-color: #156296;
+    color: #ffffff;
+    text-align: center;
+}
+
+.table tbody td {
+    text-align: center;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table img {
+    max-width: 80px; /* Ajusta el tamaño de la imagen en la tabla */
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+    .table {
+        font-size: 0.875rem; /* Ajusta el tamaño de la fuente en pantallas pequeñas */
+    }
+}
+
+/* Estilos para el contenedor de tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Estilos para cada tarjeta */
+.card {
+    border: none;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img-top {
+    border-bottom: 1px solid #dee2e6;
+    max-height: 180px; /* Ajusta la altura máxima de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área del contenedor */
+}
+
+.card-body {
+    padding: 1.5rem;
+    background-color: #ffffff;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #156296;
+    font-weight: bold;
+    text-transform: uppercase; /* Título en mayúsculas */
+    text-align: center;
+}
+
+.card-text {
+    color: #333333;
+    margin-bottom: 0.5rem;
+}
+
+/* Efectos de transición en la tarjeta */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }

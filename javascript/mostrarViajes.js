@@ -19,13 +19,15 @@ function mostrarTarjetas() {
 
     data.forEach((paquete) => {
         const card = document.createElement('div')
-        card.className = 'col-md-4 mb-4';
+        card.className = 'col-md-3 mb-4';
 
         card.innerHTML = `
         <div class="card">
             <div class="card-body">
+            <img class="card-text imagen-tarjetas" src='${paquete.imagen}'>
                 <h5 class="card-title">${paquete.nombre}</h5>
-                <p class="card-text">Precio: $${paquete.precio.toFixed()}</p>
+                <p class="card-text">Precio por persona desde</p>
+                <p class="card-text">$${paquete.precio.toFixed()}</p>
                 <p class="card-text">Fecha: ${paquete.fecha}</p>
             </div>
         </div>
