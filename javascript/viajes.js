@@ -1,4 +1,5 @@
 
+
 const api = 'http://localhost:5500/viajes'
 let data = []
 
@@ -65,15 +66,49 @@ function mostrarTabla() {
 
 //FUNCION PARA ELIMINAR UN PRODUCTO DE LA TABLA Y LA API
 async function eliminarViaje(id) {
-    try {
-        await fetch(`${api}/${id}`, {
-            method: 'DELETE'
-        })
-        data = data.filter(viaje => viaje.id !== id); //ELIMINA EL PRODUCTO DEL ARRAY
-        mostrarTabla(); //ACTUALIZA LA TABLA UNA VEZ QUE EL PRODUCTO ES BORRADO
-    } catch (error) {
-        console.error('Error al eliminar el producto', error)
+    // Mostrar la alerta de confirmación
+    const result = await Swal.fire({
+        title: '¿Estás seguro?',
+        text: "¡No podrás revertir esto!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, ¡borrar!',
+        cancelButtonText: 'Cancelar',
+        
+    });
+
+    if (result.isConfirmed) {
+        try {
+            const response = await fetch(`${api}/${id}`, {
+                method: 'DELETE'
+            })
+            if (response.ok) {
+                data = data.filter(viaje => viaje.id !== id); //ELIMINA EL PRODUCTO DEL ARRAY
+                mostrarTabla(); //ACTUALIZA LA TABLA UNA VEZ QUE EL PRODUCTO ES BORRADO
+                Swal.fire({   // Muestra una alerta de éxito
+                    title: '¡Borrado!',
+                    text: 'El producto ha sido borrado.',
+                    icon: 'success',
+                    timer: 7000,
+                    showConfirmButton: false,
+            });
+            } else {
+                // Muestra una alerta de error si la respuesta no es ok
+                Swal.fire(
+                    'Error',
+                    'Hubo un problema al eliminar el producto.',
+                    'error'
+                );
+            }
+
+        } catch (error) {
+            console.error('Error al eliminar el producto', error)
+        }
     }
+
+
 }
 
 async function agregarViaje(event) {

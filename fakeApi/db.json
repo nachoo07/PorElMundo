@@ -1,18 +1,39 @@
 {
   "viajes": [
     {
+      "id": "f14e",
       "nombre": "españa",
-      "precio": 500,
-      "fecha": "2024-07-01",
-      "imagen": "https://media.viajando.travel/p/3f600e17dd8b89dd3aa9b82f54b7b6c2/adjuntos/236/imagenes/000/662/0000662813/412x232/smart/shutterstock_786312625-espana-madridjpg.jpg",
-      "id": "592a"
+      "precio": 200000,
+      "fecha": "2024-07-23",
+      "imagen": "https://media.viajando.travel/p/3f600e17dd8b89dd3aa9b82f54b7b6c2/adjuntos/236/imagenes/000/662/0000662813/412x232/smart/shutterstock_786312625-espana-madridjpg.jpg"
     },
     {
+      "id": "0022",
       "nombre": "buenos aires",
-      "precio": 500,
-      "fecha": "2024-07-02",
-      "imagen": "https://media.admagazine.com/photos/618a6a585e45a526c6be8f63/master/w_1600%2Cc_limit/61333.jpg",
-      "id": "ff56"
+      "precio": 325000,
+      "fecha": "2024-07-22",
+      "imagen": "https://media.admagazine.com/photos/618a6a585e45a526c6be8f63/master/w_1600%2Cc_limit/61333.jpg"
+    },
+    {
+      "id": "2b3e",
+      "nombre": "irlanda",
+      "precio": 2500000,
+      "fecha": "2024-08-07",
+      "imagen": "https://static.nationalgeographic.es/files/styles/image_3200/public/94278.ngsversion.1475073096343.adapt.768.1.jpg?w=1190&h=794"
+    },
+    {
+      "id": "15b2",
+      "nombre": "korea",
+      "precio": 3120300,
+      "fecha": "2024-07-24",
+      "imagen": "https://virtuoso-prod.dotcms.cloud/dA/67277fa6-3aea-4ccf-923c-90b5069c3e8b/previewImage/KoreaGuide_preview.jpg"
+    },
+    {
+      "id": "d8b2",
+      "nombre": "esatdos unidos",
+      "precio": 1000000,
+      "fecha": "2024-07-25",
+      "imagen": "https://fotografias.larazon.es/clipping/cmsimages02/2023/07/03/CDA4010B-F2E4-4B73-8ACF-5389259F0245/bandera-estados-unidos-ondea-viento_69.jpg?crop=612,344,x0,y27&width=1280&height=720&optimize=low&format=webply"
     }
   ]
 }
