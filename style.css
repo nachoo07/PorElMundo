@@ -112,7 +112,7 @@ footer {
     padding: 20px 0;
 }
 footer a {
-    color: #ffc107;
+    color: #156296;
     text-decoration: none;
 }
 footer a:hover {
@@ -308,4 +308,10 @@ footer a:hover {
 .btn-danger:hover {
     color: #fff;
     background-color: #c82333;
+}
+
+.boton-editar{
+    font-size: 15px;
+    margin: 5px;
+
 }

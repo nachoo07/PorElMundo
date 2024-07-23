@@ -1,11 +1,11 @@
 {
   "viajes": [
     {
-      "id": "f14e",
       "nombre": "españa",
-      "precio": 200000,
+      "precio": 20000,
       "fecha": "2024-07-23",
-      "imagen": "https://media.viajando.travel/p/3f600e17dd8b89dd3aa9b82f54b7b6c2/adjuntos/236/imagenes/000/662/0000662813/412x232/smart/shutterstock_786312625-espana-madridjpg.jpg"
+      "imagen": "https://media.viajando.travel/p/3f600e17dd8b89dd3aa9b82f54b7b6c2/adjuntos/236/imagenes/000/662/0000662813/412x232/smart/shutterstock_786312625-espana-madridjpg.jpg",
+      "id": "f14e"
     },
     {
       "id": "0022",
@@ -27,13 +27,6 @@
       "precio": 3120300,
       "fecha": "2024-07-24",
       "imagen": "https://virtuoso-prod.dotcms.cloud/dA/67277fa6-3aea-4ccf-923c-90b5069c3e8b/previewImage/KoreaGuide_preview.jpg"
-    },
-    {
-      "id": "d8b2",
-      "nombre": "esatdos unidos",
-      "precio": 1000000,
-      "fecha": "2024-07-25",
-      "imagen": "https://fotografias.larazon.es/clipping/cmsimages02/2023/07/03/CDA4010B-F2E4-4B73-8ACF-5389259F0245/bandera-estados-unidos-ondea-viento_69.jpg?crop=612,344,x0,y27&width=1280&height=720&optimize=low&format=webply"
     }
   ]
 }

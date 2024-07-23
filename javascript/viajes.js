@@ -42,20 +42,18 @@ function mostrarTabla() {
         img.style.height = 'auto';
         imagenViaje.appendChild(img);
         row.appendChild(imagenViaje);
-        //imagenViaje.textContent = paquete.imagen
-        //row.appendChild(imagenViaje)
 
         const acciones = document.createElement('td')
 
         const editarBoton = document.createElement('button')
         editarBoton.textContent = 'Editar'
-        editarBoton.className = 'btn btn-warning btn-sm';
+        editarBoton.className = 'btn btn-warning btn-sm boton-editar';
         editarBoton.addEventListener('click', () => editarViaje(paquete.id));
         acciones.appendChild(editarBoton);
 
         const eliminarBoton = document.createElement('button')
         eliminarBoton.textContent = 'Eliminar';
-        eliminarBoton.className = 'btn btn-danger btn-sm';
+        eliminarBoton.className = 'btn btn-danger btn-sm ';
         eliminarBoton.addEventListener('click', () => eliminarViaje(paquete.id));
         acciones.appendChild(eliminarBoton);
 
@@ -102,13 +100,10 @@ async function eliminarViaje(id) {
                     'error'
                 );
             }
-
         } catch (error) {
             console.error('Error al eliminar el producto', error)
         }
     }
-
-
 }
 
 async function agregarViaje(event) {
@@ -125,9 +120,7 @@ async function agregarViaje(event) {
         precio: parseFloat(precioInput.value),
         fecha: fechaInput.value,
         imagen: imagenInput.value
-
     }
-
     try {
         if (idInput) {
             await fetch(`${api}/${idInput}`, {
@@ -173,7 +166,6 @@ function editarViaje(id) {
         document.querySelector('#fecha').value = viaje.fecha;
         document.querySelector('#imagen').value = viaje.imagen;
         document.querySelector('#submit-button').textContent = 'Actualizar Producto'; // Cambia el texto del botón
-
     }
 }
 
@@ -215,8 +207,6 @@ function renderizarTabla() {
         });
 
         accion.appendChild(botonEliminarUsuario);
-
-
     })
 }
 
