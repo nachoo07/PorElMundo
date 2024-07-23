@@ -296,3 +296,16 @@ footer a:hover {
     color: #dee2e6;
     font-size: 20px;
 }
+
+#adminLink {
+    display: none; /* Ocultar por defecto */
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+}
+.btn-danger:hover {
+    color: #fff;
+    background-color: #c82333;
+}

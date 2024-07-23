@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Por el mundo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../estilos/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary navegador ">
+          <div class="container-fluid navegador">
+            <a class="titulo-inicio" href="../index.html"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main class="container-fluid d-flex justify-content-center p-5"> 
+        <form id="loginForm" class="justify-content-center formulario-rectangular">
+
+            <div class="text-center p-3 main-text">
+                <h4 class="">Inicia sesión </h4>
+                <h6>¿No tienes cuenta en Por el Mundo aún? <a href="../paginas/registro.html">Regístrate Gratis</a></h6>   
+            </div>
+      
+            <div class="p-3 main-text">
+                <label for="registroInputEmail" class="form-label">Dirección de email</label>
+      
+              <div class="mb-4  position-relative">
+                <input type="email" placeholder="usuario@mail.com" id="email" required autofocus class="form-control" required maxlength="30">
+              </div>
+          
+                <label for="registroInputContraseña" class="form-label">Contraseña</label>
+      
+              <div class=" mb-1 position-relative">
+                <input type="password" name="clave1" placeholder="Contraseña" id="password" required class="form-control" required  maxlength="15" minlength="7">
+                <i class="bi bi-eye" id="iconoMostrarContraseña"></i>
+              </div>
+      
+              <div class="row justify-content-center mt-4">
+              <input type= "submit" value="Iniciar Sesion" class="col-8 col-sm-3 btn" id="registroBtn">
+              </div>
+              <div class="text-center p-2 main-text">
+                  <h6>¿Olvidaste tu contraseña?</h6><a href="../paginas/error404.html">Recupera tu cuenta </a>
+              </div>
+            </div>
+      
+          </form>
+
+      </main>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 footer-column">
+              <h5>Acerca de Nosotros</h5>
+              <p>Somos una empresa dedicada a ofrecer los mejores paquetes de viaje.</p>
+            </div>
+            <div class="col-md-4 footer-column">
+              <h5>Enlaces Útiles</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Paquetes</a></li>
+                <li><a href="#">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 footer-column">
+              <h5>Contacto</h5>
+              <p>Dirección: Calle Falsa 123</p>
+              <p>Teléfono: +123 456 7890</p>
+              <p>Email: info@empresa.com</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="../javascript/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+</body>
+</html>

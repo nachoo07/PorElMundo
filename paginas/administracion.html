@@ -28,6 +28,9 @@
                             <a class="titulo-admin" aria-current="page"
                                 href="../paginas/administracion.html">Administracion</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="titulo-admin" aria-current="page" href="../paginas/login.html">Cerrar sesison</a>
+                          </li>
                     </ul>
                 </div>
             </div>
@@ -70,6 +73,21 @@
                     <!-- Los datos se insertarán aquí -->
                 </tbody>
             </table>
+            <div class="container mt-4">
+                <h1>Usuarios Registrados</h1>
+                <table id="tabla-usuarios" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las filas de la tabla se agregarán aquí mediante JavaScript -->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
     <footer>
@@ -97,6 +115,7 @@
         </div>
     </footer>
     <script src="../javascript/viajes.js"></script>
+    <script src="../javascript/cerrarSesion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

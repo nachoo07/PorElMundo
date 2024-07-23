@@ -66,6 +66,7 @@ function mostrarTabla() {
 
 //FUNCION PARA ELIMINAR UN PRODUCTO DE LA TABLA Y LA API
 async function eliminarViaje(id) {
+
     // Mostrar la alerta de confirmación
     const result = await Swal.fire({
         title: '¿Estás seguro?',
@@ -76,7 +77,6 @@ async function eliminarViaje(id) {
         cancelButtonColor: '#d33',
         confirmButtonText: 'Sí, ¡borrar!',
         cancelButtonText: 'Cancelar',
-        
     });
 
     if (result.isConfirmed) {
@@ -93,7 +93,7 @@ async function eliminarViaje(id) {
                     icon: 'success',
                     timer: 7000,
                     showConfirmButton: false,
-            });
+                });
             } else {
                 // Muestra una alerta de error si la respuesta no es ok
                 Swal.fire(
@@ -180,3 +180,80 @@ function editarViaje(id) {
 document.querySelector('#add-product-form').addEventListener('submit', agregarViaje);
 
 obtenerViajes()
+
+
+//RECUPERO LOS DATOS DEL LOCAL STORAGE
+const usuariosGuardados = localStorage.getItem('users')
+
+//CONVIERTO LOS DATOS A UN OBJETO
+const usuarios = JSON.parse(usuariosGuardados)
+
+//ACCEDO A LA TABLA DEL HTML
+const tablaUsuarios = document.getElementById('tabla-usuarios').getElementsByTagName('tbody')[0];
+
+//FUNCION PARA RENDERIZAR LA TABLA 
+function renderizarTabla() {
+    tablaUsuarios.innerHTML = '';
+
+    //ITERO LOS DATOS Y LOS AGREGO EN LA FILA DE LA TABLA
+    usuarios.forEach(function (usuario, index) {
+        const fila = tablaUsuarios.insertRow()
+        const nombreUsario = fila.insertCell(0)
+        const emailUsuario = fila.insertCell(1)
+        const accion = fila.insertCell(2);
+
+        nombreUsario.textContent = usuario.name
+        emailUsuario.textContent = usuario.email
+
+
+        const botonEliminarUsuario = document.createElement("button");
+        botonEliminarUsuario.classList.add("btn", "btn-danger");
+        botonEliminarUsuario.textContent = "Eliminar";
+
+        botonEliminarUsuario.addEventListener('click', function () {
+            eliminarUsuario(index);
+        });
+
+        accion.appendChild(botonEliminarUsuario);
+
+
+    })
+}
+
+// FUNCION PARA ELIMINAR UN USUARIO
+function eliminarUsuario(index) {
+    // Confirmar eliminación
+    Swal.fire({
+        title: '¿Estás seguro?',
+        text: "No podrás deshacer esta acción",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, eliminar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Eliminar el usuario del array y actualizar el localStorage
+            usuarios.splice(index, 1);
+            localStorage.setItem('users', JSON.stringify(usuarios));
+
+            // Volver a renderizar la tabla
+            renderizarTabla();
+
+            // Mostrar mensaje de éxito
+            Swal.fire(
+                'Eliminado!',
+                'El usuario ha sido eliminado.',
+                'success'
+            );
+        }
+    });
+}
+
+// RENDERIZAR LA TABLA AL CARGAR LA PÁGINA
+document.addEventListener('DOMContentLoaded', renderizarTabla);
+
+
+
+
